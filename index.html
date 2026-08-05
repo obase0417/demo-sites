@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>デモサイト一覧</title>
+<style>
+  :root { --bg:#f7f7f5; --text:#22201d; --muted:#6b6660; --card:#ffffff; --line:#e3e0da; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:32px 20px 64px; background:var(--bg); color:var(--text);
+         font-family:"Helvetica Neue", Arial, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  header { max-width:1040px; margin:0 auto 32px; }
+  h1 { font-size:1.5rem; margin:0 0 8px; }
+  header p { margin:0; color:var(--muted); font-size:.9rem; }
+  .grid { max-width:1040px; margin:0 auto; display:grid; gap:20px;
+          grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); }
+  .card { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+          overflow:hidden; text-decoration:none; color:inherit; transition:transform .2s ease; }
+  .card:hover { transform:translateY(-3px); }
+  .card img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--line); }
+  .card h3 { margin:14px 16px 4px; font-size:1rem; }
+  .card p { margin:0 16px 16px; color:var(--muted); font-size:.8rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>デモサイト一覧</h1>
+  <p>ご提案用に制作したデモページのポータルです。掲載内容の一部はイメージです。</p>
+</header>
+<main class="grid">
+<!-- demo-004 -->
+  <a class="card" href="./demo-004/">
+    <img src="./demo-004/assets/IMG_79FD4D5E-8731-4D99-ABEB-B713AD1D0360.jpg" alt="ベーカリー PREGO（プレーゴ） デモサイト" loading="lazy">
+    <h3>ベーカリー PREGO（プレーゴ）</h3>
+    <p>ベーカリー・埼玉県吉川市／制作日：2026-08-05</p>
+  </a>
+<!-- CARDS_END -->
+</main>
+</body>
+</html>
