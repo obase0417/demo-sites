@@ -1,6 +1,6 @@
 # 案件台帳
 
-最終更新：2026/08/07（金） 16:58（JST）／PMエージェントが自動更新します。
+最終更新：2026/08/07（金） 17:58（JST）／PMエージェントが自動更新します。
 
 | 案件ID | 店舗名 | 業種 | エリア | 状態 | デモURL | 最終更新 | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -18,4 +18,4 @@
 | demo-012 | 居酒屋やっちゃば（吉川店） | 居酒屋・海鮮料理店 | 吉川市 | DROP | https://obase0417.github.io/demo-sites/yatchaba-yoshikawa/ | 08/07 13:18 | 却下（却下） |
 | demo-013 | やきとり きっちょう | やきとり・居酒屋 | 吉川市 | DROP | https://obase0417.github.io/demo-sites/kiichyo-yoshikawa/ | 08/07 16:55 |  |
 | demo-014 | 博多ラーメン 洋ちゃん食堂 | ラーメン店（博多豚骨ラーメン専門） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/youchan-shokudo/ | 08/07 16:55 |  |
-| demo-015 | 肉のフジヤマ（釜炊きごはんと焼肉） | 焼肉店（旧店名「焼肉本舗 土門」からリニューアル） | 吉川市 | REVIEW | https://obase0417.github.io/demo-sites/niku-no-fujiyama/ | 08/07 16:54 |  |
+| demo-015 | 肉のフジヤマ（釜炊きごはんと焼肉） | 焼肉店（旧店名「焼肉本舗 土門」からリニューアル） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/niku-no-fujiyama/ | 08/07 16:58 |  |
