@@ -1,6 +1,6 @@
 # 案件台帳
 
-最終更新：2026/08/09（日） 16:26（JST）／PMエージェントが自動更新します。
+最終更新：2026/08/09（日） 17:26（JST）／PMエージェントが自動更新します。
 
 | 案件ID | 店舗名 | 業種 | エリア | 状態 | デモURL | 最終更新 | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -22,4 +22,5 @@
 | demo-016 | 古着屋 SATO -サト- | 古着店（ヴィンテージ古着・リメイク） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/furugiya-sato/ | 08/09 09:52 |  |
 | demo-017 | 酒乃おはこ屋 | 酒販店（地酒・自然派ワイン専門店／カフェ併設・日本酒バル） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/sakenoohakoya/ | 08/09 14:30 |  |
 | demo-018 | JAHAN インド・ネパール料理（ジャーハン） | インド・ネパール料理店（飲食） | 吉川市 | REVIEW | https://obase0417.github.io/demo-sites/jahan-yoshikawa/ | 08/09 14:02 |  |
-| demo-019 | ALL GRANT（オールグラント） | パーソナルトレーニングジム | 吉川市 | BLOCKED | — | 08/09 16:01 |  |
+| demo-019 | ALL GRANT（オールグラント） | パーソナルトレーニングジム | 吉川市 | APPROVED | https://obase0417.github.io/demo-sites/allgrant-yoshikawa/ | 08/09 16:50 |  |
+| demo-020 | 製麺練場 風布うどん（ふうぷうどん） | うどん専門店（武蔵野うどん） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/fuupu-udon/ | 08/09 17:05 |  |
