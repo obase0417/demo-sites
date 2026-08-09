@@ -1,6 +1,6 @@
 # 案件台帳
 
-最終更新：2026/08/07（金） 17:58（JST）／PMエージェントが自動更新します。
+最終更新：2026/08/09（日） 10:13（JST）／PMエージェントが自動更新します。
 
 | 案件ID | 店舗名 | 業種 | エリア | 状態 | デモURL | 最終更新 | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -19,3 +19,4 @@
 | demo-013 | やきとり きっちょう | やきとり・居酒屋 | 吉川市 | DROP | https://obase0417.github.io/demo-sites/kiichyo-yoshikawa/ | 08/07 16:55 |  |
 | demo-014 | 博多ラーメン 洋ちゃん食堂 | ラーメン店（博多豚骨ラーメン専門） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/youchan-shokudo/ | 08/07 16:55 |  |
 | demo-015 | 肉のフジヤマ（釜炊きごはんと焼肉） | 焼肉店（旧店名「焼肉本舗 土門」からリニューアル） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/niku-no-fujiyama/ | 08/07 16:58 |  |
+| demo-016 | 古着屋 SATO -サト- | 古着店（ヴィンテージ古着・リメイク） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/furugiya-sato/ | 08/09 09:52 |  |
