@@ -1,167 +1,187 @@
-(() => {
-  'use strict';
+/* ==========================================================================
+   pommery（ポメリー）Nail & Lash — デモサイト script.js
+   外部通信は一切行わない（fetch / XHR / WebSocket 不使用）
+   ========================================================================== */
+(function () {
+  "use strict";
 
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ------------------------------------------------------------------
-   * 1. Staggered scroll-reveal via IntersectionObserver
-   * ------------------------------------------------------------------ */
-  const initStagger = () => {
-    document.querySelectorAll('[data-stagger-group]').forEach((group) => {
-      const items = group.querySelectorAll('[data-reveal]');
-      items.forEach((el, i) => {
-        if (!el.style.transitionDelay) {
-          el.style.transitionDelay = `${i * 90}ms`;
-        }
+     1. ヒーロー登場演出
+     ------------------------------------------------------------------ */
+  var hero = document.getElementById("hero");
+  function triggerHero() {
+    if (!hero) return;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        hero.classList.add("is-loaded");
       });
     });
-  };
+  }
+  if (document.readyState === "complete") {
+    triggerHero();
+  } else {
+    window.addEventListener("load", triggerHero, { once: true });
+  }
 
-  const initReveal = () => {
-    const targets = document.querySelectorAll('[data-reveal]');
-    if (!('IntersectionObserver' in window) || prefersReduced) {
-      targets.forEach((el) => el.classList.add('in'));
-      return;
+  /* ------------------------------------------------------------------
+     2. スクロール連動の出現（IntersectionObserver・stagger は --d で指定済み）
+     ------------------------------------------------------------------ */
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealEls.length) {
+    var revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          el.style.willChange = "opacity, transform";
+          el.classList.add("is-inview");
+          el.addEventListener(
+            "transitionend",
+            function () { el.style.willChange = "auto"; },
+            { once: true }
+          );
+          observer.unobserve(el);
+        });
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+    );
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("is-inview"); });
+  }
+
+  /* ------------------------------------------------------------------
+     3. 追従ヘッダー（縮小・表示/非表示）＋ 固定CTAバーの出入り
+        スクロール処理は rAF にまとめて 1 本化する
+     ------------------------------------------------------------------ */
+  var header = document.getElementById("siteHeader");
+  var ctaBar = document.getElementById("ctaBar");
+  var lastY = window.scrollY || 0;
+  var ticking = false;
+
+  function onScrollFrame() {
+    var y = window.scrollY || 0;
+
+    if (header) {
+      if (y > 60) header.classList.add("site-header--scrolled");
+      else header.classList.remove("site-header--scrolled");
+
+      if (y > lastY && y > 220) header.classList.add("site-header--hidden");
+      else header.classList.remove("site-header--hidden");
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+
+    lastY = y;
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        window.requestAnimationFrame(onScrollFrame);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  /* CTAバーはヒーローを抜けたタイミングで出す */
+  if (ctaBar && hero && "IntersectionObserver" in window) {
+    var ctaObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in');
-            io.unobserve(entry.target);
+            ctaBar.classList.remove("is-visible");
+          } else if (entry.boundingClientRect.top < 0) {
+            ctaBar.classList.add("is-visible");
           }
         });
       },
-      { threshold: 0.16, rootMargin: '0px 0px -8% 0px' }
+      { threshold: 0 }
     );
-    targets.forEach((el) => io.observe(el));
-  };
+    ctaObserver.observe(hero);
+  } else if (ctaBar) {
+    ctaBar.classList.add("is-visible");
+  }
 
   /* ------------------------------------------------------------------
-   * 2. Hero entrance — time-based, staggered on load
-   * ------------------------------------------------------------------ */
-  const initHero = () => {
-    const hero = document.querySelector('[data-hero]');
-    if (!hero) return;
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        hero.classList.add('is-ready');
+     4. 視差（パララックス）— rAF でまとめて処理
+     ------------------------------------------------------------------ */
+  var parallaxEls = Array.prototype.slice.call(document.querySelectorAll(".parallax"));
+  function updateParallax() {
+    if (reduceMotion || !parallaxEls.length) return;
+    parallaxEls.forEach(function (el) {
+      var speed = parseFloat(el.getAttribute("data-speed")) || 0.2;
+      var rect = el.parentElement.getBoundingClientRect();
+      var offset = rect.top * speed;
+      el.style.transform = "translate3d(0," + offset.toFixed(2) + "px,0)";
+    });
+    requestAnimationFrame(updateParallax);
+  }
+  if (!reduceMotion && parallaxEls.length) {
+    requestAnimationFrame(updateParallax);
+  }
+
+  /* ------------------------------------------------------------------
+     5. モバイルナビの開閉
+     ------------------------------------------------------------------ */
+  var navToggle = document.getElementById("navToggle");
+  var primaryNav = document.getElementById("primaryNav");
+  if (navToggle && primaryNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = primaryNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      navToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+    });
+    primaryNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        primaryNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "メニューを開く");
       });
     });
-  };
+  }
 
   /* ------------------------------------------------------------------
-   * 3. Fixed header — shrink on scroll, hide on scroll-down, show on scroll-up
-   * ------------------------------------------------------------------ */
-  const initHeader = () => {
-    const header = document.querySelector('[data-header]');
-    if (!header) return;
-    let lastY = window.scrollY;
-    let ticking = false;
-
-    const update = () => {
-      const y = window.scrollY;
-      header.classList.toggle('is-scrolled', y > 40);
-      if (y > lastY && y > window.innerHeight * 0.6) {
-        header.classList.add('is-hidden');
-      } else {
-        header.classList.remove('is-hidden');
-      }
-      lastY = y;
-      ticking = false;
-    };
-
-    window.addEventListener(
-      'scroll',
-      () => {
-        if (!ticking) {
-          requestAnimationFrame(update);
-          ticking = true;
-        }
-      },
-      { passive: true }
-    );
-  };
-
-  /* ------------------------------------------------------------------
-   * 4. Fixed bottom CTA bar — appears once the hero is scrolled past
-   * ------------------------------------------------------------------ */
-  const initCtaBar = () => {
-    const bar = document.querySelector('[data-cta-bar]');
-    const hero = document.querySelector('[data-hero]');
-    if (!bar || !hero) return;
-
-    if (!('IntersectionObserver' in window)) {
-      bar.classList.add('is-visible');
+     6. 数字のカウントアップ（★評価・口コミ件数）
+     ------------------------------------------------------------------ */
+  var countEls = document.querySelectorAll(".count-up");
+  function animateCount(el) {
+    var raw = el.getAttribute("data-count-to") || "0";
+    var target = parseFloat(raw);
+    var decimals = raw.indexOf(".") > -1 ? raw.split(".")[1].length : 0;
+    if (reduceMotion) {
+      el.textContent = target.toFixed(decimals);
       return;
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          bar.classList.toggle('is-visible', !entry.isIntersecting);
+    var duration = 1100;
+    var start = null;
+    function step(ts) {
+      if (start === null) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = target * eased;
+      el.textContent = current.toFixed(decimals);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target.toFixed(decimals);
+    }
+    requestAnimationFrame(step);
+  }
+  if ("IntersectionObserver" in window && countEls.length) {
+    var countObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
         });
       },
-      { threshold: 0, rootMargin: '-70% 0px 0px 0px' }
+      { threshold: 0.6 }
     );
-    io.observe(hero);
-  };
-
-  /* ------------------------------------------------------------------
-   * 5. Parallax — hero background & content drift at different rates
-   * ------------------------------------------------------------------ */
-  const initParallax = () => {
-    if (prefersReduced) return;
-    const media = document.querySelector('[data-parallax-media]');
-    const content = document.querySelector('[data-parallax-content]');
-    const hero = document.querySelector('[data-hero]');
-    if (!media || !hero) return;
-
-    let ticking = false;
-
-    const update = () => {
-      const rect = hero.getBoundingClientRect();
-      const heroHeight = rect.height || window.innerHeight;
-      const progress = Math.min(Math.max(-rect.top / heroHeight, 0), 1.4);
-
-      media.style.willChange = 'transform';
-      media.style.transform = `translateY(${progress * 60}px)`;
-
-      if (content) {
-        content.style.willChange = 'transform, opacity';
-        content.style.transform = `translateY(${progress * -24}px)`;
-        content.style.opacity = String(Math.max(1 - progress * 1.1, 0));
-      }
-      ticking = false;
-    };
-
-    window.addEventListener(
-      'scroll',
-      () => {
-        if (!ticking) {
-          requestAnimationFrame(update);
-          ticking = true;
-        }
-      },
-      { passive: true }
-    );
-    update();
-  };
-
-  /* ------------------------------------------------------------------
-   * init
-   * ------------------------------------------------------------------ */
-  const start = () => {
-    initStagger();
-    initReveal();
-    initHero();
-    initHeader();
-    initCtaBar();
-    initParallax();
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', start);
+    countEls.forEach(function (el) { countObserver.observe(el); });
   } else {
-    start();
+    countEls.forEach(animateCount);
   }
 })();

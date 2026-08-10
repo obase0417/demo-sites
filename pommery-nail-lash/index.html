@@ -4,27 +4,27 @@
 <script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>pommery（ポメリー）Nail &amp; Lash｜吉川美南の隠れ家ネイル・まつげサロン</title>
-<meta name="description" content="埼玉県吉川市美南、吉川美南駅徒歩5分。完全予約制・貸切スタイルのネイル&まつげサロン pommery（ポメリー）。パラジェルネイルとまつげエクステで、大人のための静かなひとときを。">
+<title>pommery（ポメリー）Nail & Lash｜吉川美南の完全予約制ネイル・まつげサロン</title>
+<meta name="description" content="埼玉県吉川市美南、吉川美南駅徒歩5分の完全予約制ネイル&まつげサロン pommery（ポメリー）。パラジェル・フィルインネイルとLED高持続まつげエクステで、大人の隠れ家のようなひとときを。">
+<meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
+<meta property="og:title" content="pommery（ポメリー）Nail & Lash｜吉川美南の完全予約制ネイル・まつげサロン">
+<meta property="og:description" content="埼玉県吉川市美南、吉川美南駅徒歩5分の完全予約制ネイル＆まつげサロン。大人の隠れ家のようなひとときを、指先とまなざしに。">
+<meta property="og:url" content="https://obase0417.github.io/demo-sites/pommery-nail/">
+<meta property="og:image" content="https://obase0417.github.io/demo-sites/pommery-nail/assets/IMG_971F6CF9-D41D-4E76-A09E-46DA58E2E727.jpg">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="pommery（ポメリー）Nail & Lash">
-<meta property="og:title" content="pommery（ポメリー）Nail & Lash｜吉川美南の隠れ家ネイル・まつげサロン">
-<meta property="og:description" content="埼玉県吉川市美南、吉川美南駅徒歩5分。完全予約制・貸切スタイルのネイル&まつげサロン。パラジェルネイルとまつげエクステで、大人のための静かなひとときを。">
-<meta property="og:url" content="https://obase0417.github.io/demo-sites/pommery-nail-lash/">
-<meta property="og:image" content="https://obase0417.github.io/demo-sites/pommery-nail-lash/assets/IMG_971F6CF9-D41D-4E76-A09E-46DA58E2E727.jpg">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
-<script src="./script.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "BeautySalon",
   "name": "pommery（ポメリー）Nail & Lash",
-  "url": "https://obase0417.github.io/demo-sites/pommery-nail-lash/",
+  "url": "https://obase0417.github.io/demo-sites/pommery-nail/",
+  "image": "https://obase0417.github.io/demo-sites/pommery-nail/assets/IMG_971F6CF9-D41D-4E76-A09E-46DA58E2E727.jpg",
+  "description": "埼玉県吉川市美南、吉川美南駅徒歩5分の完全予約制ネイル＆まつげサロン。パラジェル・フィルインネイルとLED高持続まつげエクステ、まつげパーマを提供。",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "美南2-15-2-E",
@@ -46,192 +46,190 @@
 </head>
 <body>
 
-<p class="demo-note">※ 本ページはpommery（ポメリー）Nail &amp; Lash様向けにご提案用として制作したデモページです。掲載内容の一部はイメージです。</p>
+<div class="demo-banner" role="note">
+  ※ 本ページは pommery（ポメリー）Nail &amp; Lash 様向けにご提案用として制作したデモページです。掲載内容の一部はイメージです。
+</div>
 
-<header class="site-header" data-header>
+<header class="site-header" id="siteHeader">
   <div class="site-header__inner">
-    <a href="#hero" class="site-header__logo">pommery</a>
-    <nav class="site-header__nav" aria-label="サイト内ナビゲーション">
-      <a href="#concept">こだわり</a>
+    <a class="site-header__logo" href="#hero">pommery</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="primaryNav" aria-label="サイト内ナビゲーション">
+      <a href="#concept">選ばれる理由</a>
       <a href="#menu">メニュー</a>
       <a href="#gallery">ギャラリー</a>
+      <a href="#voice">お客様の声</a>
       <a href="#access">アクセス</a>
+      <a class="site-nav__cta" href="https://www.instagram.com/pommery_nail/" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <a href="https://www.instagram.com/pommery_nail/" class="site-header__insta" target="_blank" rel="noopener">Instagram</a>
   </div>
 </header>
 
 <main>
 
-  <section id="hero" class="hero" data-hero>
-    <div class="hero__media">
-      <div class="hero__parallax" data-parallax-media>
-        <div class="panel-cover hero__cover">
-          <div class="panel panel--1" data-kenburns role="img" aria-label="窓から自然光が差し込む、明るく落ち着いたネイル&まつげサロンの施術スペース"></div>
-        </div>
-      </div>
-      <div class="hero__scrim" aria-hidden="true"></div>
-    </div>
-    <div class="hero__content" data-parallax-content>
-      <p class="eyebrow" data-hero-el>NAIL &amp; LASH SALON</p>
+  <section class="hero" id="hero">
+    <div class="hero__bg panel panel--1 parallax" data-speed="0.25" role="img" aria-label="白とベージュを基調とした、落ち着いた雰囲気のpommeryの施術ルーム"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <p class="hero__vertical" aria-hidden="true">大人の、隠れ家サロン。</p>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal" data-dir="up" style="--d:0">YOSHIKAWAMINAMI ／ NAIL &amp; LASH SALON</p>
       <h1 class="hero__title">
-        <span class="hero__title-clip"><span class="hero__title-line" data-hero-el>pommery</span></span>
-        <span class="visually-hidden">（ポメリー）Nail &amp; Lash</span>
+        <span class="line"><span class="line__inner">pommery</span></span>
+        <span class="line line--sub"><span class="line__inner">ポメリー</span></span>
       </h1>
-      <p class="hero__vertical" data-hero-el aria-hidden="true">大人の、隠れ家。</p>
-      <p class="hero__lead" data-hero-el>吉川美南、完全予約制・貸切のネイル&amp;まつげサロン</p>
-      <a href="#concept" class="hero__scroll" data-hero-el aria-label="スクロールして詳しく見る">
-        <span class="hero__scroll-line" aria-hidden="true"></span>
-        <span>SCROLL</span>
-      </a>
-    </div>
-  </section>
-
-  <section id="concept" class="concept">
-    <div class="concept__inner">
-      <div class="concept__text">
-        <span class="section-eyebrow" data-reveal="fade">CONCEPT</span>
-        <h2 data-reveal="up">指先とまつ毛に、<br>まとう静けさを。</h2>
-        <p data-reveal="up" style="transition-delay:120ms">吉川美南駅から徒歩5分。完全予約制・貸切スタイルで、おひとりの時間に丁寧に向き合うネイル&amp;まつげサロンです。窓から差し込む自然光の中、日常から少し離れたひとときをお過ごしください。</p>
-      </div>
-      <p class="concept__vertical" aria-hidden="true" data-reveal="fade">静けさを、まとう。</p>
-      <div class="concept__media panel-cover" data-reveal="clip">
-        <div class="panel panel--5" role="img" aria-label="ベージュ系のネイルカラーチップとオイルなど、施術に使う道具のディテール"></div>
+      <p class="hero__lead reveal" data-dir="up" style="--d:1">
+        完全予約制・貸切スタイルの、指先とまなざしのための時間。<br>
+        吉川美南駅から歩いて5分、静かな大人の隠れ家へ。
+      </p>
+      <div class="hero__cta reveal" data-dir="up" style="--d:2">
+        <a class="btn btn--primary" href="#access">アクセス・営業時間を見る</a>
+        <a class="btn btn--ghost" href="https://www.instagram.com/pommery_nail/" target="_blank" rel="noopener">Instagramを見る</a>
       </div>
     </div>
+
+    <a class="hero__scroll" href="#concept" aria-label="次のセクションへスクロール">
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+      <span class="hero__scroll-text">SCROLL</span>
+    </a>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>COMPLETE PRIVATE SALON</span><span>吉川美南駅 徒歩5分</span><span>完全予約制・貸切</span><span>NAIL &amp; LASH</span>
-      <span>COMPLETE PRIVATE SALON</span><span>吉川美南駅 徒歩5分</span><span>完全予約制・貸切</span><span>NAIL &amp; LASH</span>
+  <section class="concept" id="concept">
+    <div class="concept__media reveal" data-dir="left" style="--d:0">
+      <div class="framed">
+        <div class="framed__media panel panel--4" role="img" aria-label="白を基調とした、シアーカーテン越しの柔らかな光が差す店内の待合スペース"></div>
+      </div>
     </div>
-  </div>
-
-  <section id="features" class="features">
-    <span class="section-eyebrow" data-reveal="fade">WHY POMMERY</span>
-    <h2 data-reveal="up">選ばれる、3つの理由。</h2>
-    <ol class="features__list" data-stagger-group>
-      <li class="features__item" data-reveal="up">
-        <span class="features__num" aria-hidden="true">01</span>
-        <div class="features__media panel-cover">
-          <div class="panel panel--2" role="img" aria-label="大人っぽいベージュ系ネイルを施した手元のアップ"></div>
-        </div>
-        <h3>眠ってしまうほどの、リラックス</h3>
-        <p>「施術中、痛かったりする事なく熟睡してしまいました」というお声をいただくほど、心からくつろげる時間をご用意しています。<br><span class="features__note">※ ホットペッパービューティー掲載口コミより抜粋（イメージ）</span></p>
-      </li>
-      <li class="features__item" data-reveal="up">
-        <span class="features__num" aria-hidden="true">02</span>
-        <div class="features__media panel-cover">
-          <div class="panel panel--4" role="img" aria-label="白を基調にした清潔感のあるサロンの内観"></div>
-        </div>
-        <h3>丁寧なカウンセリングと、行き届いた清潔感</h3>
-        <p>お一人おひとりの指先・目もとの状態を伺いながら、丁寧なカウンセリングから施術まで進めます。</p>
-      </li>
-      <li class="features__item" data-reveal="up">
-        <span class="features__num" aria-hidden="true">03</span>
-        <div class="features__media panel-cover">
-          <div class="panel panel--3" role="img" aria-label="上品なまつげエクステを施した目もとのアップ"></div>
-        </div>
-        <h3>完全予約制・貸切の、大人の隠れ家</h3>
-        <p>他のお客様と時間が重ならない貸切スタイル。周りを気にせず、ご自分だけの時間をお楽しみいただけます。</p>
-      </li>
-    </ol>
+    <div class="concept__text">
+      <p class="eyebrow reveal" data-dir="up" style="--d:0">CONCEPT</p>
+      <h2 class="section-title reveal" data-dir="up" style="--d:1">選ばれる、<br>三つの理由。</h2>
+      <p class="concept__lead reveal" data-dir="up" style="--d:2">
+        完全予約制・貸切スタイルだから、他のお客様を気にせず過ごせる時間。
+        丁寧なカウンセリングと清潔な店内での、静かなひととき。
+      </p>
+      <ul class="concept__points">
+        <li class="reveal" data-dir="up" style="--d:3">
+          <span class="concept__num">01</span>
+          <div>
+            <h3>完全予約制・貸切</h3>
+            <p>他のお客様と顔を合わせることのない、貸切スタイルでの施術。落ち着いて過ごせる「大人の隠れ家」です。</p>
+          </div>
+        </li>
+        <li class="reveal" data-dir="up" style="--d:4">
+          <span class="concept__num">02</span>
+          <div>
+            <h3>丁寧なカウンセリング</h3>
+            <p>仕上がりのご希望や体調をじっくり伺ってから施術へ。清潔に整えられた店内での安心感も評判です。</p>
+          </div>
+        </li>
+        <li class="reveal" data-dir="up" style="--d:5">
+          <span class="concept__num">03</span>
+          <div>
+            <h3>ホットペッパービューティー ★5.0</h3>
+            <p>口コミ<span class="count-up" data-count-to="11">0</span>件で評価<span class="count-up" data-count-to="5.0">0.0</span>の高評価をいただいています。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section id="menu" class="menu">
-    <div class="menu__bg panel-cover" aria-hidden="true">
-      <div class="panel panel--5"></div>
-    </div>
-    <div class="menu__inner">
-      <span class="section-eyebrow" data-reveal="fade">MENU</span>
-      <h2 data-reveal="up">メニュー</h2>
-      <div class="menu__grid" data-stagger-group>
-        <div class="menu__group" data-reveal="up">
-          <h3>NAIL</h3>
-          <ul>
-            <li>パラジェルネイル</li>
-            <li>フィルインネイル</li>
-          </ul>
-        </div>
-        <div class="menu__group" data-reveal="up">
-          <h3>LASH</h3>
-          <ul>
-            <li>LED高持続まつげエクステ</li>
-            <li>まつげパーマ</li>
-          </ul>
+  <section class="menu" id="menu">
+    <p class="eyebrow reveal" data-dir="up" style="--d:0">MENU</p>
+    <h2 class="section-title reveal" data-dir="up" style="--d:1">ネイル &amp; まつげ</h2>
+
+    <div class="menu__item">
+      <div class="menu__media reveal" data-dir="right" style="--d:0">
+        <div class="framed framed--alt">
+          <div class="framed__media panel panel--2" role="img" aria-label="上品なベージュ系カラーで仕上げたジェルネイルの施術例"></div>
         </div>
       </div>
-      <p class="menu__note" data-reveal="fade">料金・デザインの詳細はLINEまたはInstagramのDMよりお気軽にお問い合わせください。</p>
+      <div class="menu__text reveal" data-dir="up" style="--d:1">
+        <span class="menu__num">01</span>
+        <h3>NAIL</h3>
+        <p class="menu__en">Paragel &amp; Fill-in Nail</p>
+        <p>爪への負担を抑えたパラジェル・フィルインネイルをご用意。指先に上質な艶と、長く綺麗をキープできる仕上がりを。</p>
+      </div>
+    </div>
+
+    <div class="menu__item menu__item--reverse">
+      <div class="menu__media reveal" data-dir="left" style="--d:0">
+        <div class="framed framed--alt">
+          <div class="framed__media panel panel--3" role="img" aria-label="丁寧に施術されたまつげエクステで整えられた目もと"></div>
+        </div>
+      </div>
+      <div class="menu__text reveal" data-dir="up" style="--d:1">
+        <span class="menu__num">02</span>
+        <h3>LASH</h3>
+        <p class="menu__en">LED Eyelash Extension &amp; Perm</p>
+        <p>LED高持続まつげエクステとまつげパーマをご用意。眠ってしまうほどリラックスできる、丁寧な施術です。</p>
+      </div>
+    </div>
+
+    <p class="menu__note reveal" data-dir="up" style="--d:0">※ 詳しいメニュー内容・料金は、Instagramまたは公式LINEにてお気軽にお問い合わせください。</p>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <p class="eyebrow reveal" data-dir="up" style="--d:0">GALLERY</p>
+    <h2 class="section-title reveal" data-dir="up" style="--d:1">ディテールへのこだわり</h2>
+    <div class="gallery__track">
+      <figure class="gallery__item reveal" data-dir="up" style="--d:0">
+        <div class="gallery__media panel panel--5" role="img" aria-label="ネイルカラーサンプルとネイルケアアイテムが並んだ施術デスク"></div>
+        <figcaption>カラーサンプル</figcaption>
+      </figure>
+      <figure class="gallery__item reveal" data-dir="up" style="--d:1">
+        <div class="gallery__media panel panel--2" role="img" aria-label="仕上がったベージュ系ジェルネイルのアップ"></div>
+        <figcaption>ジェルネイル</figcaption>
+      </figure>
+      <figure class="gallery__item reveal" data-dir="up" style="--d:2">
+        <div class="gallery__media panel panel--3" role="img" aria-label="施術後の自然な仕上がりのまつげエクステ"></div>
+        <figcaption>まつげエクステ</figcaption>
+      </figure>
+      <figure class="gallery__item reveal" data-dir="up" style="--d:3">
+        <div class="gallery__media panel panel--4" role="img" aria-label="観葉植物とシアーカーテンが配された店内の一角"></div>
+        <figcaption>店内の様子</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section id="gallery" class="gallery">
-    <span class="section-eyebrow" data-reveal="fade">GALLERY</span>
-    <h2 data-reveal="up">ギャラリー</h2>
-    <div class="gallery__track" data-stagger-group>
-      <figure class="gallery__item" data-reveal="side">
-        <div class="panel panel--2" role="img" aria-label="大人っぽいベージュ系ネイルを施した手元のアップ"></div>
-        <figcaption>NAIL</figcaption>
-      </figure>
-      <figure class="gallery__item" data-reveal="side">
-        <div class="panel panel--3" role="img" aria-label="上品なまつげエクステを施した目もとのアップ"></div>
-        <figcaption>LASH</figcaption>
-      </figure>
-      <figure class="gallery__item" data-reveal="side">
-        <div class="panel panel--4" role="img" aria-label="白を基調にした清潔感のあるサロン内観"></div>
-        <figcaption>SALON</figcaption>
-      </figure>
-      <figure class="gallery__item" data-reveal="side">
-        <div class="panel panel--5" role="img" aria-label="ネイルカラーチップとオイルなど道具のディテール"></div>
-        <figcaption>DETAIL</figcaption>
-      </figure>
-    </div>
+  <section class="voice" id="voice">
+    <p class="eyebrow reveal" data-dir="up" style="--d:0">VOICE</p>
+    <h2 class="section-title reveal" data-dir="up" style="--d:1">お客様の声</h2>
+    <blockquote class="voice__quote reveal" data-dir="up" style="--d:2">
+      「施術中、痛かったりする事なく熟睡してしまいました。」
+    </blockquote>
+    <p class="voice__note reveal" data-dir="up" style="--d:3">※ 口コミ内容をもとに作成したイメージです。</p>
   </section>
 
-  <section id="voice" class="voice">
-    <div class="voice__bg panel-cover" aria-hidden="true">
-      <div class="panel panel--1"></div>
-    </div>
-    <div class="voice__inner">
-      <span class="section-eyebrow" data-reveal="fade">VOICE</span>
-      <h2 data-reveal="up">お客様の声</h2>
-      <blockquote data-reveal="up">
-        <p>「施術中、痛かったりする事なく熟睡してしまいました。」</p>
-      </blockquote>
-      <p class="voice__rating" data-reveal="fade">ホットペッパービューティー ★5.0（口コミ11件）</p>
-      <p class="voice__note">※ ホットペッパービューティー掲載口コミより抜粋しています（イメージ）</p>
-    </div>
-  </section>
+  <section class="access" id="access">
+    <p class="eyebrow reveal" data-dir="up" style="--d:0">ACCESS</p>
+    <h2 class="section-title reveal" data-dir="up" style="--d:1">アクセス・営業時間</h2>
 
-  <section id="access" class="access">
-    <span class="section-eyebrow" data-reveal="fade">ACCESS</span>
-    <h2 data-reveal="up">アクセス・営業時間</h2>
     <div class="access__grid">
-      <dl class="access__info" data-reveal="up">
-        <div><dt>住所</dt><dd>埼玉県吉川市美南2-15-2-E<br>（吉川美南駅 徒歩5分）</dd></div>
-        <div><dt>営業時間</dt><dd>10:00〜19:00<br><span class="access__small">※ メニュー・スタッフにより変動</span></dd></div>
-        <div><dt>定休日</dt><dd>火曜・不定休</dd></div>
-        <div><dt>ご予約</dt><dd>完全予約制</dd></div>
-      </dl>
-      <div class="access__map" data-reveal="fade">
-        <iframe src="https://www.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%90%89%E5%B7%9D%E5%B8%82%E7%BE%8E%E5%8D%972-15-2&output=embed" title="pommery（ポメリー）Nail &amp; Lash 周辺地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="access__info reveal" data-dir="up" style="--d:2">
+        <dl>
+          <div><dt>店名</dt><dd>pommery（ポメリー）Nail &amp; Lash</dd></div>
+          <div><dt>住所</dt><dd>埼玉県吉川市美南2-15-2-E<br><span class="access__sub">吉川美南駅 徒歩5分</span></dd></div>
+          <div><dt>営業時間</dt><dd>10:00〜19:00<br><span class="access__sub">※ メニュー・スタッフにより変動あり</span></dd></div>
+          <div><dt>定休日</dt><dd>火曜・不定休</dd></div>
+          <div><dt>予約</dt><dd>完全予約制</dd></div>
+        </dl>
+        <div class="access__actions">
+          <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%90%89%E5%B7%9D%E5%B8%82%E7%BE%8E%E5%8D%972-15-2-E" target="_blank" rel="noopener">Googleマップで経路を見る</a>
+          <a class="btn btn--ghost" href="https://www.instagram.com/pommery_nail/" target="_blank" rel="noopener">Instagramで最新情報を見る</a>
+          <a class="btn btn--line" href="#" aria-disabled="true" title="デモのためリンク先は未設定です">公式LINEで相談する</a>
+        </div>
+        <p class="access__note">※ 公式LINEはデモのためリンク先は未設定です。</p>
       </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="contact__inner">
-      <span class="section-eyebrow" data-reveal="fade">RESERVE</span>
-      <h2 data-reveal="up">ご予約・お問い合わせ</h2>
-      <div class="contact__buttons" data-stagger-group>
-        <a href="#" class="btn btn--line" data-reveal="up" aria-disabled="true">
-          LINEで予約・相談
-          <small>※ デモのためリンク先は未設定です</small>
-        </a>
-        <a href="https://www.instagram.com/pommery_nail/" target="_blank" rel="noopener" class="btn btn--insta" data-reveal="up">
-          Instagramで最新情報を見る
-        </a>
+      <div class="access__map reveal" data-dir="up" style="--d:3">
+        <iframe
+          src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%90%89%E5%B7%9D%E5%B8%82%E7%BE%8E%E5%8D%972-15-2-E&output=embed"
+          title="pommery（ポメリー）Nail & Lash 地図"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="pommery（ポメリー）Nail & Lash の地図（埼玉県吉川市美南2-15-2-E）">
+        </iframe>
       </div>
     </div>
   </section>
@@ -239,15 +237,23 @@
 </main>
 
 <footer class="site-footer">
-  <p class="site-footer__brand">pommery（ポメリー）Nail &amp; Lash</p>
-  <p class="site-footer__addr">埼玉県吉川市美南2-15-2-E｜10:00〜19:00（火曜・不定休）</p>
-  <p class="site-footer__demo">※ 本ページはご提案用に制作したデモページです。実在の情報と一部異なる場合があります。</p>
+  <p class="site-footer__logo">pommery</p>
+  <p class="site-footer__note">※ 本ページは pommery（ポメリー）Nail &amp; Lash 様向けにご提案用として制作したデモページです。掲載内容の一部はイメージであり、実在する情報は調査時点のものです。</p>
+  <p class="site-footer__copy">Demo site produced for proposal purposes.</p>
 </footer>
 
-<nav class="cta-bar" data-cta-bar aria-label="予約・SNSへのショートカット">
-  <a href="#" class="cta-bar__btn cta-bar__btn--line" aria-disabled="true">LINE予約</a>
-  <a href="https://www.instagram.com/pommery_nail/" target="_blank" rel="noopener" class="cta-bar__btn cta-bar__btn--insta">Instagram</a>
-</nav>
+<div class="cta-bar" id="ctaBar">
+  <p class="cta-bar__note">※ 公式LINEはデモのためリンク先は未設定です</p>
+  <div class="cta-bar__row">
+    <a class="cta-bar__btn cta-bar__btn--line" href="#" aria-disabled="true" title="デモのためリンク先は未設定です">
+      <span>公式LINE</span>
+    </a>
+    <a class="cta-bar__btn cta-bar__btn--ig" href="https://www.instagram.com/pommery_nail/" target="_blank" rel="noopener">
+      <span>Instagram</span>
+    </a>
+  </div>
+</div>
 
+<script src="./script.js" defer></script>
 </body>
 </html>
