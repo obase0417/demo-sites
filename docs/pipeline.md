@@ -1,6 +1,6 @@
 # 案件台帳
 
-最終更新：2026/08/10（月） 10:15（JST）／PMエージェントが自動更新します。
+最終更新：2026/08/10（月） 11:15（JST）／PMエージェントが自動更新します。
 
 | 案件ID | 店舗名 | 業種 | エリア | 状態 | デモURL | 最終更新 | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -24,4 +24,4 @@
 | demo-018 | JAHAN インド・ネパール料理（ジャーハン） | インド・ネパール料理店（飲食） | 吉川市 | DROP | https://obase0417.github.io/demo-sites/jahan-yoshikawa/ | 08/10 09:25 | 却下（却下） |
 | demo-019 | ALL GRANT（オールグラント） | パーソナルトレーニングジム | 吉川市 | DROP | https://obase0417.github.io/demo-sites/allgrant-yoshikawa/ | 08/10 09:25 | 却下（却下） |
 | demo-020 | 製麺練場 風布うどん（ふうぷうどん） | うどん専門店（武蔵野うどん） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/fuupu-udon/ | 08/09 17:05 |  |
-| demo-021 | pommery（ポメリー）Nail & Lash | ネイルサロン／まつげサロン（複合美容サロン、完全予約制） | 吉川市 | REVIEW | https://obase0417.github.io/demo-sites/pommery-nail-lash/ | 08/10 09:55 |  |
+| demo-021 | pommery（ポメリー）Nail & Lash | ネイルサロン／まつげサロン（複合美容サロン、完全予約制） | 吉川市 | DROP | https://obase0417.github.io/demo-sites/pommery-nail-lash/ | 08/10 10:19 | 却下（却下） |
