@@ -1,6 +1,6 @@
 # 案件台帳
 
-最終更新：2026/08/11（火） 11:46（JST）／PMエージェントが自動更新します。
+最終更新：2026/08/11（火） 14:22（JST）／PMエージェントが自動更新します。
 
 | 案件ID | 店舗名 | 業種 | エリア | 状態 | デモURL | 最終更新 | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -28,3 +28,4 @@
 | demo-022 | Bakery&Cafe FEU CLAIR（フークレール） | ベーカリー＆カフェ（天然酵母パン・軽食・ハンドメイド雑貨） | 吉川市 | DROP | — | 08/10 12:42 |  |
 | demo-023 | solo design hair（ソロデザイン） | 美容室（ヘアサロン／メンズ・レディース対応） | 吉川市 | DROP | https://obase0417.github.io/demo-sites/solo-design-hair/ | 08/11 11:03 | 却下（却下） |
 | demo-024 | 韓国居酒屋 韓謝亭（駅前かんしゃ） | 韓国料理居酒屋 | 吉川市 | DROP | https://obase0417.github.io/demo-sites/kanshatei/ | 08/11 11:02 | 却下（却下） |
+| demo-025 | MACHI CAFE LOUNGE（マチ カフェ ラウンジ） | カフェ＆バー（昼カフェ・ランチ／夜バー） | 吉川市 | REVIEW | https://obase0417.github.io/demo-sites/machicafe-lounge/ | 08/11 14:14 |  |
