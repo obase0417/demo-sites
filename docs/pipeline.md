@@ -1,6 +1,6 @@
 # 案件台帳
 
-最終更新：2026/08/17（月） 10:23（JST）／PMエージェントが自動更新します。
+最終更新：2026/08/17（月） 11:23（JST）／PMエージェントが自動更新します。
 
 | 案件ID | 店舗名 | 業種 | エリア | 状態 | デモURL | 最終更新 | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -31,6 +31,6 @@
 | demo-025 | MACHI CAFE LOUNGE（マチ カフェ ラウンジ） | カフェ＆バー（昼カフェ・ランチ／夜バー） | 吉川市 | DROP | https://obase0417.github.io/demo-sites/machicafe-lounge/ | 08/11 14:23 | 却下（却下） |
 | demo-026 | BOXINGFITNESS KENGYM（ボクシングフィットネス ケンジム） | ボクシングフィットネスジム（個人経営） | 吉川市 | DROP | https://obase0417.github.io/demo-sites/kengym-yoshikawa/ | 08/11 15:19 |  |
 | demo-027 | らーめん尾ばな（尾花） | ラーメン店（町中華系食堂） | 吉川市 | DROP | https://obase0417.github.io/demo-sites/ramen-obana/ | 08/14 13:54 | 却下（却下） |
-| demo-028 | 萬的中華 笑龍（しょうりゅう） | 中華料理店（創作四川中華・日本酒ペアリング） | 吉川市 | REVIEW | https://obase0417.github.io/demo-sites/shourong-yoshikawa/ | 08/17 09:34 |  |
-| demo-029 | お好み焼き・もんじゃハウス マミー | お好み焼き・もんじゃ焼き・鉄板焼き | 吉川市 | REVIEW | https://obase0417.github.io/demo-sites/monjahouse-mommy/ | 08/17 09:46 |  |
+| demo-028 | 萬的中華 笑龍（しょうりゅう） | 中華料理店（創作四川中華・日本酒ペアリング） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/shourong-yoshikawa/ | 08/17 10:35 |  |
+| demo-029 | お好み焼き・もんじゃハウス マミー | お好み焼き・もんじゃ焼き・鉄板焼き | 吉川市 | SENT | https://obase0417.github.io/demo-sites/monjahouse-mommy/ | 08/17 10:37 |  |
 | demo-030 | 和食処 貴味（きあじ） | 和食店（日本料理） | 吉川市 | DESIGN_WAIT | — | 08/17 09:31 |  |
