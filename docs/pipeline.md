@@ -1,6 +1,6 @@
 # 案件台帳
 
-最終更新：2026/08/17（月） 14:08（JST）／PMエージェントが自動更新します。
+最終更新：2026/08/17（月） 15:09（JST）／PMエージェントが自動更新します。
 
 | 案件ID | 店舗名 | 業種 | エリア | 状態 | デモURL | 最終更新 | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -34,5 +34,5 @@
 | demo-028 | 萬的中華 笑龍（しょうりゅう） | 中華料理店（創作四川中華・日本酒ペアリング） | 吉川市 | SENT | https://obase0417.github.io/demo-sites/shourong-yoshikawa/ | 08/17 10:35 |  |
 | demo-029 | お好み焼き・もんじゃハウス マミー | お好み焼き・もんじゃ焼き・鉄板焼き | 吉川市 | SENT | https://obase0417.github.io/demo-sites/monjahouse-mommy/ | 08/17 10:37 |  |
 | demo-030 | 和食処 貴味（きあじ） | 和食店（日本料理） | 吉川市 | DESIGN_WAIT | — | 08/17 09:31 |  |
-| demo-031 | 刺身・地場野菜 よしだ家 | 海鮮居酒屋（個人経営） | 吉川市 | BUILD | https://obase0417.github.io/demo-sites/yoshidaya-yoshikawa/ | 08/17 13:54 |  |
-| demo-032 | Food Cafe Legame（フードカフェ レガーメ） | 創作イタリアン（レストラン・バー） | 吉川市 | DESIGN_WAIT | — | 08/17 14:00 |  |
+| demo-031 | 刺身・地場野菜 よしだ家 | 海鮮居酒屋（個人経営） | 吉川市 | BLOCKED | https://obase0417.github.io/demo-sites/yoshidaya-yoshikawa/ | 08/17 14:14 |  |
+| demo-032 | Food Cafe Legame（フードカフェ レガーメ） | 創作イタリアン（レストラン・バー） | 吉川市 | BLOCKED | — | 08/17 14:14 |  |
